@@ -4,7 +4,7 @@ import { faker } from '@faker-js/faker';
 const albumsApi = createApi({
     reducerPath: 'albums',
     baseQuery: fetchBaseQuery({
-        baseUrl: 'http://localhost:3005',
+        baseUrl: process.env.REACT_APP_MISCELLANY_API_URI,
     }),
     endpoints(builder) {
         return {
